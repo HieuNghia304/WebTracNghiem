@@ -27,5 +27,5 @@ const Admin = (props) => {
         </div>
     )
 }
-
+ 
 export default Admin;
