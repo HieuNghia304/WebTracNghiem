@@ -1,4 +1,20 @@
-.modal-add-user{
+.manage-user-container {
+    padding: 10px;
+
+    .users-content {
+        .btn-add-new {
+            margin: 15px 0;
+        }
+    }
+
+    .title {
+        font-weight: 600;
+        font-size: 20px;
+
+    }
+}
+
+.modal-add-user {
     .img-preview {
         border: 1px solid red;
         height: 150px;
@@ -14,8 +30,8 @@
         }
     }
 
-    .label-upload{
-        display:  flex;
+    .label-upload {
+        display: flex;
         align-items: center;
         gap: 5px;
         border: 1px solid red;
