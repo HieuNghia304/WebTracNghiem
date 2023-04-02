@@ -1,10 +1,15 @@
 import React from 'react';
-import  './Admin.scss';
+
+import './Admin.scss';
 import { FaBars } from 'react-icons/fa';
 import { useState } from "react";
 import SideBar from './SideBar';
 import { Outlet } from 'react-router-dom';
+
 import { ToastContainer } from 'react-toastify';
+
+import { ToastContainer, toast } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -23,6 +28,7 @@ const Admin = (props) => {
                 </div>
 
                 <div className="admin-main">
+
                    <Outlet />
                 </div>
             </div>
