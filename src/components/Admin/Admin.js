@@ -1,10 +1,18 @@
 import React from 'react';
+<<<<<<< HEAD
 import  './Admin.scss';
+=======
+import './Admin.scss';
+>>>>>>> 7d9caa718caf1c4f0a97338adcbfc20ed5b5bda2
 import { FaBars } from 'react-icons/fa';
 import { useState } from "react";
 import SideBar from './SideBar';
 import { Outlet } from 'react-router-dom';
+<<<<<<< HEAD
 import { ToastContainer } from 'react-toastify';
+=======
+import { ToastContainer, toast } from 'react-toastify';
+>>>>>>> 7d9caa718caf1c4f0a97338adcbfc20ed5b5bda2
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -23,12 +31,20 @@ const Admin = (props) => {
                 </div>
 
                 <div className="admin-main">
+<<<<<<< HEAD
                    <Outlet />
                 </div>
             </div>
 
             <ToastContainer
                 position="bottom-center"
+=======
+                    <Outlet />
+                </div>
+            </div>
+            <ToastContainer
+                position="bottom-left"
+>>>>>>> 7d9caa718caf1c4f0a97338adcbfc20ed5b5bda2
                 autoClose={5000}
                 hideProgressBar={false}
                 newestOnTop={false}
@@ -38,6 +54,7 @@ const Admin = (props) => {
                 draggable
                 pauseOnHover
                 theme="light"
+<<<<<<< HEAD
                 />
             {/* Same as */}
             <ToastContainer />
@@ -45,4 +62,11 @@ const Admin = (props) => {
     )
 }
  
+=======
+            />
+        </div>
+    )
+}
+
+>>>>>>> 7d9caa718caf1c4f0a97338adcbfc20ed5b5bda2
 export default Admin;

@@ -1,10 +1,20 @@
+<<<<<<< HEAD
 
+=======
+import { isValidDateValue } from '@testing-library/user-event/dist/utils';
+import axios from 'axios';
+>>>>>>> 7d9caa718caf1c4f0a97338adcbfc20ed5b5bda2
 import React, { useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import { FcPlus } from 'react-icons/fc';
+<<<<<<< HEAD
 import {  toast } from 'react-toastify';
 import { postCreateNewUser } from '../../../services/apiService';
+=======
+import { toast } from 'react-toastify';
+
+>>>>>>> 7d9caa718caf1c4f0a97338adcbfc20ed5b5bda2
 
 const ModalCreateUser = (props) => {
   const { show, setShow } = props;
@@ -32,7 +42,10 @@ const ModalCreateUser = (props) => {
       // setPreviewImage("");
     }
   }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7d9caa718caf1c4f0a97338adcbfc20ed5b5bda2
   const validateEmail = (email) => {
     return String(email)
       .toLowerCase()
@@ -40,6 +53,7 @@ const ModalCreateUser = (props) => {
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
       );
   };
+<<<<<<< HEAD
 
   const handleSubmitCreateUser = async () => {
     //validate
@@ -77,6 +91,39 @@ const ModalCreateUser = (props) => {
 
     if(data && data.EC !== 0){
       toast.error(data.EM);
+=======
+  const handleSubmitCreateUser = async () => {
+    //validate
+    const IsValidEmail = validateEmail(email);
+
+    if (!IsValidEmail) {
+      toast.error('invalid email')
+      //toast.success('test success')
+      //toast.info('test information')
+      return;
+    }
+    if (!password) {
+      toast.error('invalid invalid password')
+      return;
+    }
+
+    //submit data 
+    const data = new FormData();
+    data.append('email', email);
+    data.append('password', password);
+    data.append('username', username);
+    data.append('role', role);
+    data.append('userImage', image);
+
+    let res = await axios.post('https://localhost:8081/api/v1/participant.com', data);
+    if (res.data && res.data.EC === 0) {
+      toast.success(res.data.EM);
+      handleClose();
+    }
+    if (res.data && res.data.EC !== 0) {
+      toast.success(res.data.EM);
+
+>>>>>>> 7d9caa718caf1c4f0a97338adcbfc20ed5b5bda2
     }
   }
 
